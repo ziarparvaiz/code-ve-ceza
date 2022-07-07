@@ -1,28 +1,29 @@
-# code-ve-ceza
-
+# Code VE Ceza
 
 ## Responsive Tasarım İçin Kullanılacak Breakpoint Değerleri
 
-- xs: 0,
-- sm: 576px,
-- md: 768px,
-- lg: 992px,
-- xl: 1200px,
-- xxl: 1400px
+- `var(--mediaBreakpoint-SM);`: 0,
+- `var(--mediaBreakpoint-SM);`: 576px,
+- `var(--mediaBreakpoint-MD);`: 768px,
+- `var(--mediaBreakpoint-LG);`: 992px,
+- `var(--mediaBreakpoint-XL);`: 1200px,
+- `var(--mediaBreakpoint-XXL);`: 1400px,
 
 ---
 
 ## Tasarım Modu
 
-* Dark Mode baz alınarak yapılacak
+- Dark Mode baz alınarak yapılacak
 
 ---
 
 ## Componentler Ve Görev Dağılımı
 
-* Navbar & Buttons (İbrahim)
-* Hero Section (Arda)
-* Sliders & Brands (Ahmet & Caner)
-* Cards & Features (Cansu)
-* Collection (Ahmet & Diğerleri)
-* Footer (Yunus)
+| Components       | Names                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------|
+| Header & Buttons | [Ibrahim Halit](https://github.com/ibo-ibo)                                                  |
+| Hero Section     | [Arda Çelik](https://github.com/celik-arda)                                                  |
+| Sliders & Brands | [ZIAR Parvaiz](https://github.com/ziarparvaiz) & [Caner Aylan](https://github.com/Shermes-s) |
+| Cards & Features | [Cansu Ayada](https://github.com/cansuayada)                                                 |
+| Collection       | [ZIAR Parvaiz](https://github.com/ziarparvaiz) & Diğerleri                                   |
+| Footer           | [Yunus Emre Deniz](https://github.com/yunusemredeniz)                                        |
