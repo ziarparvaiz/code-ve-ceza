@@ -1,0 +1,32 @@
+:root {
+  // Colors Variables
+  --navbarBg: #04111d;
+  --bgColor: #202225;
+  --primary: #2081e2;
+  --darkPrimary: #1868B7;
+  --lightPrimary: #15B2E5;
+  --success: #34c77b;
+  --danger: #c94d4e;
+  --gray: #303339;
+  --lightGray: #353840
+  --light: #ffffff;
+  --darkLight: #fefefe;
+
+  // Breakpoints Variables
+  --mediaBreakpoint-XS: 0;
+  --mediaBreakpoint-SM: 576px;
+  --mediaBreakpoint-MD: 768px;
+  --mediaBreakpoint-LG: 992px;
+  --mediaBreakpoint-XL: 1200px;
+  --mediaBreakpoint-XXL: 1400px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: white;
+}
