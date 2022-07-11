@@ -1,5 +1,5 @@
 # Code VE Ceza
-deneme
+
 ## Responsive Tasarım İçin Kullanılacak Breakpoint Değerleri
 
 - `var(--mediaBreakpoint-SM);`: 0,
