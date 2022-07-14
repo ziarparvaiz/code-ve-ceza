@@ -82,7 +82,7 @@ flex-direction: column;
 }
 .resim{
     padding: 15px 25px 0;
-    background-color: rgb(32, 129, 226);
+    background-color: rgb(31, 99, 168);
     margin: 0 5px 0 10px;
     padding: 0 10px;
     position: relative;
@@ -92,6 +92,7 @@ flex-direction: column;
     font-size: 17px;
     padding: 5px;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .tekresim{
     padding: 0 0 0 170px;
