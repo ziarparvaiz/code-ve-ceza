@@ -1,0 +1,73 @@
+header {
+    background-color: var(--navbarBg);
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 0 24px;
+}
+
+
+header img {
+    height: auto;
+    width: 150px;
+}
+
+header .search-bar {
+    height: 48px;
+    padding: 8px;
+    border: 2px solid rgb(76, 80, 92);
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    max-width: 768px;
+    user-select: none;
+}
+
+header .search-bar .icon {
+    color: rgb(138, 147, 155);
+    font-weight: 600;
+}
+
+header .search-bar input {
+    background-color: transparent;
+    line-height: 26px;
+    color: var(--light);
+    font-size: 16px;
+    width: inherit;
+    padding-right: 1.5rem;
+    font-weight: 400;
+
+}
+
+header .search-bar input::placeholder {
+    color: rgb(138, 147, 155);
+}
+
+header nav .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+header nav .nav-menu li {
+    cursor: pointer;
+}
+
+header nav .nav-menu li:hover,
+header nav .nav-menu li span:hover {
+    color: var(--light);
+}
+
+header nav .nav-menu .menu-icon {
+    font-weight: 600;
+    color: rgb(138, 147, 155);
+    font-size: 30px;
+    align-items: center;
+    padding: 0 10px;
+    vertical-align: middle;
+}
