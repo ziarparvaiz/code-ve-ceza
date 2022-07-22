@@ -1,5 +1,5 @@
 :root {
-  // Colors Variables
+  /* Colors Variables */
   --navbarBg: #04111d;
   --bgColor: #202225;
   --primary: #2081e2;
@@ -8,11 +8,11 @@
   --success: #34c77b;
   --danger: #c94d4e;
   --gray: #303339;
-  --lightGray: #353840
+  --lightGray: #353840;
   --light: #ffffff;
   --darkLight: #fefefe;
 
-  // Breakpoints Variables
+  /* Breakpoints Variables */
   --mediaBreakpoint-XS: 0;
   --mediaBreakpoint-SM: 576px;
   --mediaBreakpoint-MD: 768px;
