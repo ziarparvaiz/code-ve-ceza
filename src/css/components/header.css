@@ -18,6 +18,7 @@ header img {
 header .search-bar {
     height: 48px;
     padding: 8px;
+    margin: 0 1rem;
     border: 2px solid rgb(76, 80, 92);
     border-radius: 10px;
     display: flex;
@@ -26,6 +27,14 @@ header .search-bar {
     width: 100%;
     max-width: 768px;
     user-select: none;
+}
+
+@media (max-width: 768px) {
+    /* var(--mediaBreakpoint-MD) */
+
+    header .search-bar {
+        display: none;
+    }
 }
 
 header .search-bar .icon {
@@ -55,6 +64,25 @@ header nav .nav-menu {
     font-weight: bold;
 }
 
+@media (max-width: 1200px) {
+    /* var(--mediaBreakpoint-XL) */
+
+    header nav .nav-menu li:not(.stay):not(.stay-lg) {
+        /* Hide all the 'li' elements in .nav-menu that doesn't have .stay and .stay-lg classes */
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    /* var(--mediaBreakpoint-LG) */
+
+    header nav .nav-menu li:not(.stay) {
+        /* Hide all the 'li' elements in .nav-menu that doesn't have only .stay classes */
+        /* So, the 'li' elements that have .stay class will be displayed in each screen size. */
+        display: none;
+    }
+}
+
 header nav .nav-menu li {
     cursor: pointer;
 }
@@ -71,4 +99,30 @@ header nav .nav-menu .menu-icon {
     align-items: center;
     padding: 0 10px;
     vertical-align: middle;
+}
+
+header nav .nav-menu .hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+header nav .nav-menu .search-icon {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    /* var(--mediaBreakpoint-XL) */
+
+    header nav .nav-menu .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    /* var(--mediaBreakpoint-MD) */
+
+    header nav .nav-menu .search-icon {
+        order: -1;
+        display: block;
+    }
 }
