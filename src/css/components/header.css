@@ -19,27 +19,34 @@ header .search-bar {
     height: 48px;
     padding: 8px;
     margin: 0 1rem;
+    margin-left: 11rem;
     border: 2px solid rgb(76, 80, 92);
     border-radius: 10px;
     display: flex;
-    gap: 1rem;
+    gap: 8px;
     align-items: center;
     width: 100%;
     max-width: 768px;
     user-select: none;
+    vertical-align: middle;
 }
 
-@media (max-width: 768px) {
-    /* var(--mediaBreakpoint-MD) */
-
+@media (max-width: 1600px) {
     header .search-bar {
-        display: none;
+        margin-left: 1rem;
     }
 }
 
 header .search-bar .icon {
     color: rgb(138, 147, 155);
     font-weight: 600;
+    font-size: 22px;
+}
+
+header .search-bar .icon.back-arrow {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
 }
 
 header .search-bar input {
@@ -53,15 +60,57 @@ header .search-bar input {
 
 }
 
-header .search-bar input::placeholder {
+header .search-bar .icon:not() header .search-bar input::placeholder {
     color: rgb(138, 147, 155);
+}
+
+@media (max-width: 768px) {
+    /* var(--mediaBreakpoint-MD) */
+
+    header .search-bar {
+        display: none;
+    }
+
+    header .search-bar.active {
+        display: flex;
+    }
+
+    header .search-bar.active {
+        position: absolute;
+        width: unset;
+        height: inherit;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        border: unset;
+        border-radius: unset;
+        background-color: rgb(53, 56, 64);
+    }
+
+    header .search-bar.active>span {
+        display: none;
+    }
+
+    header .search-bar.active .icon.back-arrow {
+        display: block;
+    }
+
+    header .search-bar.active input {
+        width: 100%;
+    }
+}
+
+header nav {
+    height: 100%;
 }
 
 header nav .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
     font-weight: bold;
+    height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -92,13 +141,79 @@ header nav .nav-menu li span:hover {
     color: var(--light);
 }
 
+header nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(48, 51, 57);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+header nav .dropdown-content::before {
+    /* This is kind of a bridge between 'li' items, which have dropdown menu, and .dropdown-content to keep dropdown menu is open. 
+    Otherwise it's closing while scrolling down the cursor towards dropdown-menu. */
+    content: "";
+    background-color: var(--navbarBg);
+    display: block;
+    height: 1.5rem;
+    width: inherit;
+}
+
+header nav .dropdown-content ul>* {
+    /* Selects the categories in the dropdown menus. */
+    padding: 1rem;
+    border-bottom: 1px solid rgb(21, 27, 34);
+}
+
+header nav .dropdown-content ul>*:hover {
+    background-color: rgb(38, 43, 47);
+    transition: 0.2s ease;
+}
+
+header nav .dropdown-content ul>*:nth-last-child() {
+    padding: 1rem;
+}
+
+header nav .dropdown-content ul .social-icons {
+    /* Selects the wrapper of social media icons in the dropdown menu of Resources. */
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: .75rem;
+    cursor: text;
+    background-color: unset;
+}
+
+header nav .dropdown-content ul .social-icons>* {
+    /* Selects the social media icons in the dropdown menu of Resources. */
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+header nav .dropdown-content ul>*>img {
+    width: 24px;
+    height: 24px;
+    margin-right: .5rem;
+    object-fit: contain;
+}
+
 header nav .nav-menu .menu-icon {
     font-weight: 600;
     color: rgb(138, 147, 155);
     font-size: 30px;
     align-items: center;
-    padding: 0 10px;
     vertical-align: middle;
+}
+
+header nav .nav-menu .menu-icon:nth-child(1) {
+    padding: 0 5px;
 }
 
 header nav .nav-menu .hamburger-menu {
