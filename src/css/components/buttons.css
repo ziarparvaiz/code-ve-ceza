@@ -1,0 +1,64 @@
+ /*
+    ----- Classes -----
+    .btn -> Creates an overall button structure.
+    .btn-primary -> Assigns the primary theme to the button.
+    .btn-secondary -> Assigns the secondary theme to the button.
+    .btn-lg (Default) -> Large button
+    .btn-sm -> Smaller button
+
+    ----- How to use? ----- 
+    1) Create an element with .btn class first. I.e. <button class="btn">
+    2) Then, assign a theme property to the button whether it's primary or secondary. I.e. <button class="btn btn-primary"> or <button class="btn btn-secondary">
+    3) You might want to give the button a size. Then, you should add ".btn-lg" and ".btn-sm" classes into your button element. I.e. <button class="btn btn-primary btn-sm">
+    NOTE: Default size property is set to ".btn-lg" class.     
+ */
+
+ .btn {
+     display: inline-flex;
+     flex-direction: row;
+     -webkit-box-align: center;
+     align-items: center;
+     border-radius: 12px;
+     -webkit-box-pack: center;
+     justify-content: center;
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 22px;
+     letter-spacing: 0.01em;
+     padding: 17px 24px;
+     /* Default button style: .btn-lg */
+     background-color: transparent;
+     border: 2px solid transparent;
+     color: rgb(255, 255, 255);
+     cursor: pointer;
+ }
+
+ .btn:hover {
+     filter: brightness(1.1);
+ }
+
+ .btn-lg {
+     padding: 17px 24px;
+     border-radius: 12px;
+     font-size: 16px;
+ }
+
+ .btn-sm {
+     padding: 6px 12px;
+     border-radius: 8px;
+     font-size: 14px;
+ }
+
+ .btn-primary {
+     color: #fff;
+     background-color: var(--primary);
+ }
+
+ .btn-secondary {
+     color: #fff;
+     background-color: var(--lightGray);
+ }
+
+ .btn-secondary:hover {
+     filter: brightness(1.3);
+ }
