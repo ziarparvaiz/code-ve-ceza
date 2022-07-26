@@ -6,6 +6,7 @@ header {
     align-items: center;
     height: 72px;
     padding: 0 24px;
+    position: relative;
 }
 
 
@@ -259,4 +260,142 @@ header nav .nav-menu .search-icon {
         order: -1;
         display: block;
     }
+}
+
+header .drawer-menu-background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    /* Its top offset is as height as <header> element. */
+    top: 72px;
+}
+
+header .drawer-menu-wrapper {
+    background-color: var(--bgColor);
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
+    width: 420px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 72px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(420px);
+    opacity: 0;
+}
+
+header .drawer-menu-wrapper .icon {
+    color: rgb(138, 147, 155);
+    font-weight: 600;
+}
+
+header .drawer-menu-wrapper .icon:hover {
+    color: white;
+}
+
+header .drawer-menu-wrapper .icon.back-arrow {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    header .drawer-menu-wrapper {
+        width: 100%;
+        z-index: 5;
+    }
+
+    header .drawer-menu-wrapper .icon.back-arrow {
+        display: block
+    }
+}
+
+header .drawer-menu-wrapper.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+header .drawer-menu-wrapper .wrapper-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgb(21, 27, 34);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+header .drawer-menu-wrapper .wrapper-content {
+    padding: 1.25rem;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul {
+    border: 1px solid rgb(21, 27, 34);
+    width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(21, 27, 34);
+    color: white;
+    font-weight: bold;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:hover {
+    background-color: rgb(38, 43, 47);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:first-child:hover {
+    /* Selects the first item of the list inside wrapper content and applies it 10px of border-top-left and border-top-right radius while it's hovering. */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:last-child:hover {
+    /* Selects the last item of the list inside wrapper content and applies it 10px of border-bottom-left and border-bottom-right radius while it's hovering. */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:last-child {
+    /* Prevents the last child item of the list from adding a border-bottom. */
+    border-bottom: none;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li>img {
+    height: 24px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li>.wallet-name {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.wallet-category {
+    font-weight: 400;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.wallet-category-primary {
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.wallet-category-secondary {
+    background-color: var(--lightGray);
+    border-radius: 10px;
+}
+
+.more-options {
+    justify-content: center;
+    align-items: center;
+    color: rgb(229, 232, 235);
 }
