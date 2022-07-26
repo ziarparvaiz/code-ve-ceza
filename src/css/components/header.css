@@ -29,6 +29,7 @@ header .search-bar {
     max-width: 768px;
     user-select: none;
     vertical-align: middle;
+    z-index: 99;
 }
 
 @media (max-width: 1600px) {
@@ -116,7 +117,7 @@ header nav .nav-menu {
 @media (max-width: 1200px) {
     /* var(--mediaBreakpoint-XL) */
 
-    header nav .nav-menu li:not(.stay):not(.stay-lg) {
+    header nav .nav-menu>li:not(.stay):not(.stay-lg) {
         /* Hide all the 'li' elements in .nav-menu that doesn't have .stay and .stay-lg classes */
         display: none;
     }
@@ -125,7 +126,7 @@ header nav .nav-menu {
 @media (max-width: 992px) {
     /* var(--mediaBreakpoint-LG) */
 
-    header nav .nav-menu li:not(.stay) {
+    header nav .nav-menu>li:not(.stay) {
         /* Hide all the 'li' elements in .nav-menu that doesn't have only .stay classes */
         /* So, the 'li' elements that have .stay class will be displayed in each screen size. */
         display: none;
@@ -153,7 +154,23 @@ header nav .dropdown-content {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 8px;
+    transform: translateX(-1rem);
 }
+
+/* Select only .dropdown-content tags which have .acc-icon class. (START) */
+header nav .dropdown-content.acc-icon {
+    transform: translateX(-8rem);
+}
+
+header nav .dropdown-content.acc-icon span {
+    margin-right: 16px;
+}
+
+header nav .dropdown-content.acc-icon ul>* {
+    min-width: 200px;
+}
+
+/* Select only .dropdown-content tags which have .acc-icon class. (END) */
 
 header nav .dropdown-content::before {
     /* This is kind of a bridge between 'li' items, which have dropdown menu, and .dropdown-content to keep dropdown menu is open. 
@@ -169,6 +186,8 @@ header nav .dropdown-content ul>* {
     /* Selects the categories in the dropdown menus. */
     padding: 1rem;
     border-bottom: 1px solid rgb(21, 27, 34);
+    display: flex;
+    align-items: center;
 }
 
 header nav .dropdown-content ul>*:hover {
