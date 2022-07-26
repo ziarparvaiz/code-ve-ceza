@@ -1,26 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    border: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
-    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, sans-serif;
-  
-}
-
-/*
-    // Variables
-    --mediaBreakpoint-XS: 0;
-    --mediaBreakpoint-SM: 576px;
-    --mediaBreakpoint-MD: 768px;
-    --mediaBreakpoint-LG: 992px;
-    --mediaBreakpoint-XL: 1200px;
-    --mediaBreakpoint-XXL: 1400px;
-*/
-
 html{
   background-color: #202225;
   height: 100%;
