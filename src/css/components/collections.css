@@ -1,0 +1,210 @@
+.collections {
+  margin: 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.collections .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--light);
+  text-align: center;
+}
+
+.collections .title span {
+  color: var(--primary);
+}
+
+.collections .collection__items {
+  margin: 56px 0px 40px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  -ms-grid-rows: (1fr 1fr) [200px];
+  grid-template-rows: repeat(200px 1fr 1fr);
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  cursor: pointer;
+}
+
+.collections .collection__items .collection__Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #151b22;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.collections .collection__items .collection__Item .collectionName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.collections .collection__items .collection__Item .collectionName .ItemNumber {
+  margin-right: 15px;
+}
+
+.collections .collection__items .collection__Item .collectionName .Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .ItemImage {
+  width: 50px;
+  height: 50px;
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .ItemImage
+  img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .itemInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .itemInfo
+  .itemName {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .itemInfo
+  .floorPrice {
+  color: #8a939b;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .itemInfo
+  .floorPrice
+  img {
+  width: 14px;
+  height: 14px;
+}
+
+.collections
+  .collection__items
+  .collection__Item
+  .collectionName
+  .Item
+  .itemInfo
+  .floorPrice
+  .ETH_Number {
+  font-weight: 600;
+}
+
+.collections .collection__items .collection__Item .collectionInfo {
+  font-size: 14px;
+}
+
+.collections .collection__items .collection__Item .collectionInfo .info {
+  font-weight: 500;
+  color: var(--success);
+}
+
+.collections .collection__items .collection__Item .collectionInfo .ETH img {
+  width: 14px;
+  height: 14px;
+}
+
+.collections .collection__items .collection__Item:hover {
+  background-color: var(--gray);
+  box-shadow: -1px 1px 14px -5px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: -1px 1px 14px -5px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: -1px 1px 14px -5px rgba(0, 0, 0, 0.63);
+  border-radius: 15px;
+}
+
+.collections .collections__Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.collections .collections__Footer .Collections_BTN {
+  background-color: var(--primary);
+  color: white;
+  padding: 17px 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+  cursor: pointer;
+}
+
+.collections .collections__Footer .Collections_BTN:hover {
+  background-color: #2081e267;
+}
