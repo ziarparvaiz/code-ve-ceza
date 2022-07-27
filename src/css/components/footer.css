@@ -8,24 +8,30 @@
     background-color: rgb(24, 104, 183);
     font-family: Poppins, sans-serif;
     line-height: 1.5;
-    font-size: 14px;
     position: absolute;
 }
-.ust{
+.top{
     margin: 6px auto;
     padding: 10px;
     height: 300px;
     
     }
-.solust{
+.lefttop{
     color: rgb(255, 255, 255);
-    font-size:15px;
-    width: 420px;
+    width: 440px;
     margin: 5px 130px 10px 95px;
-    padding: 10px;
+     padding: 10px;
 float: left;
-font-weight: 50px;
+
 position: relative;
+}
+.fontsize{
+    padding-top: 20px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+h5{
+    font-size: 15px;
 }
 .toggle-btn{
     position: relative;
@@ -44,34 +50,31 @@ position: relative;
 }
 .border{
     border-radius: 10px;
-    width: 300px;
+    width: 290px;
     height: 50px;
     font-size: 17px;
     padding: 5px;
-    letter-spacing: 1px;
+    
 }
 .text{
     padding-top: 15px;
 }
-.sagust{
+.righttop{
     color: rgb(255, 255, 255);
-    font-size:15px;
     width: 480px;
-    padding: 26px ;
+    padding: 8px ;
 display: flex;
 height: 200px;
 margin: 5px 10px 10px 95px;
 flex-direction: column;
 }
-.a1{
-    padding-top: 20px;
-}
-.blok{
+
+.bordersize{
     width: 500px;
     height: 50px;
     display: block;
     }
-.resimler{
+.imgs{
     width: 80px;
     display: flex;
     height: 60px;
@@ -80,9 +83,9 @@ flex-direction: column;
     padding: 5px;
     
 }
-.resim{
+.picture{
     padding: 15px 25px 0;
-    background-color: rgb(31, 99, 168);
+    background-color: rgb(27, 130, 233);
     margin: 0 5px 0 10px;
     padding: 0 10px;
     position: relative;
