@@ -6,9 +6,11 @@ header {
     align-items: center;
     height: 72px;
     padding: 0 24px;
-    position: relative;
-}
+    position: fixed;
+    left: 0;
+    right: 0;
 
+}
 
 header img {
     height: auto;
@@ -299,6 +301,10 @@ header .drawer-menu-wrapper .icon.back-arrow {
     margin-right: 8px;
 }
 
+header .drawer-menu-wrapper#mobile-nav .sub-menu .back-arrow {
+    display: block;
+}
+
 @media (max-width: 992px) {
     header .drawer-menu-wrapper {
         width: 100%;
@@ -328,12 +334,45 @@ header .drawer-menu-wrapper .wrapper-content {
     padding: 1.25rem;
 }
 
+header .drawer-menu-wrapper#mobile-nav .wrapper-content {
+    /* For only mobile drawer menu */
+    padding: 0
+}
+
 header .drawer-menu-wrapper .wrapper-content ul {
     border: 1px solid rgb(21, 27, 34);
     width: 100%;
     border-radius: 8px;
     margin: 1.5rem 0;
 }
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul {
+    /* For only mobile drawer menu */
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    background-color: var(--gray);
+}
+
+@media (max-width: 992px) {
+    header .drawer-menu-wrapper#mobile-nav .wrapper-content#home-nav ul>li:nth-child(4) {
+        /* For only home-nav of mobile drawer menu */
+        position: fixed;
+        bottom: 5rem;
+        width: 100%;
+    }
+
+    header .drawer-menu-wrapper#mobile-nav .wrapper-content ul li>button {
+        /* For only mobile drawer menu */
+        width: 100%;
+    }
+}
+
+
 
 header .drawer-menu-wrapper .wrapper-content ul>li {
     display: flex;
@@ -344,10 +383,32 @@ header .drawer-menu-wrapper .wrapper-content ul>li {
     font-weight: bold;
 }
 
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li {
+    /* For only mobile drawer menu */
+    gap: .5rem;
+    padding: 1.5rem 1rem;
+    border-bottom: unset;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li>span {
+    /* For only mobile drawer menu */
+    font-size: 32px;
+    font-weight: 600;
+}
+
 header .drawer-menu-wrapper .wrapper-content ul>li:hover {
     background-color: rgb(38, 43, 47);
     transition: 0.2s ease;
     cursor: pointer;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li:hover {
+    /* For only mobile drawer menu */
+    background-color: unset;
+    transition: unset;
+    cursor: pointer;
+    color: white;
 }
 
 header .drawer-menu-wrapper .wrapper-content ul>li:first-child:hover {
@@ -360,6 +421,46 @@ header .drawer-menu-wrapper .wrapper-content ul>li:last-child:hover {
     /* Selects the last item of the list inside wrapper content and applies it 10px of border-bottom-left and border-bottom-right radius while it's hovering. */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li:first-child:hover {
+    /* For only mobile drawer menu */
+    /* Undo border radius properties of wrapper content for .mobile-nav drawer. */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li:last-child:hover {
+    /* For only mobile drawer menu */
+    /* Undo border radius properties of wrapper content for .mobile-nav drawer. */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+header #mobile-nav .wrapper-content .social-icons {
+    /* For only mobile drawer menu */
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 2rem;
+    cursor: text;
+    background-color: var(--bgColor);
+    width: 100%;
+    height: 3rem;
+    padding: 2.5rem 0;
+}
+
+header #mobile-nav .wrapper-content .social-icons>* {
+    /* For only mobile drawer menu */
+    cursor: pointer;
+    margin-right: 0;
+    width: 24px;
 }
 
 header .drawer-menu-wrapper .wrapper-content ul>li:last-child {
@@ -398,4 +499,31 @@ header .drawer-menu-wrapper .wrapper-content ul>li>.wallet-name {
     justify-content: center;
     align-items: center;
     color: rgb(229, 232, 235);
+}
+
+header #mobile-nav .wrapper-content.sub-menu .wrapper-header {
+    cursor: pointer;
+}
+
+header #mobile-nav .wrapper-content.sub-menu {
+    display: none;
+    overflow-y: auto;
+}
+
+header #mobile-nav .wrapper-content.sub-menu.active {
+    display: block;
+}
+
+header #mobile-nav .wrapper-content.sub-menu#home-nav.active {
+    display: flex;
+}
+
+header #mobile-nav {
+    transform: translateX(420px);
+    opacity: 0;
+}
+
+header #mobile-nav.active {
+    transform: translateX(0px);
+    opacity: 1;
 }

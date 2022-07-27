@@ -35,29 +35,48 @@ function header() {
 
   function drawerMenu() {
     const walletIcon = document.querySelector(".wallet-icon");
+    const hamburgerIcon = document.querySelector(".hamburger-menu");
     const drawerMenu = document.querySelector(".drawer-menu-background");
-    const drawerMenuWrapper = document.querySelector(".drawer-menu-wrapper");
+    const myWallet = document.querySelector("#my-wallet");
+    const mobileNav = document.querySelector("#mobile-nav");
     const backArrow = document.querySelector(
       ".drawer-menu-wrapper .back-arrow"
     );
-    drawerChecker();
-    function drawerChecker() {
-      if (drawerMenuWrapper.classList.contains("active")) {
-        //Prevents the user from scrolling the page while the drawer menu is on the screen.
-        document.body.style.overflow = "hidden";
-        drawerMenu.style.visibility = "visible";
-      } else {
-        drawerMenu.style.visibility = "hidden";
-      }
-    }
+    const homeNav = document.querySelector("#home-nav");
+    const backHomeNav = document.querySelectorAll(".sub-menu .wrapper-header");
+    const subMenus = document.querySelectorAll(".sub-menu");
+    const subExplore = document.querySelector("#sub-explore");
+    const goExploreMenu = document.querySelector("#goExplore");
+    const subStats = document.querySelector("#sub-stats");
+    const goStatsMenu = document.querySelector("#goStats");
+    const subResources = document.querySelector("#sub-resources");
+    const goResourcesMenu = document.querySelector("#goResources");
 
+    drawerChecker(); // Check whether drawerMenu is active or not when DOM is loaded.
+    window.addEventListener("resize", () => {
+      mobileNav.classList.remove("active");
+      drawerChecker();
+    });
     walletIcon.addEventListener("click", () => {
-      drawerMenuWrapper.classList.toggle("active");
+      myWallet.classList.toggle("active");
+      mobileNav.classList.remove("active");
+      subMenus.forEach((subMenu) => {
+        subMenu.classList.remove("active");
+      });
+      homeNav.classList.add("active");
+      drawerChecker();
+      hamburgerIcon.firstElementChild.textContent = "menu";
+    });
+
+    hamburgerIcon.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+      myWallet.classList.remove("active");
       drawerChecker();
     });
 
     drawerMenu.addEventListener("click", () => {
-      drawerMenuWrapper.classList.toggle("active");
+      myWallet.classList.remove("active");
+      mobileNav.classList.remove("active");
       drawerChecker();
     });
 
@@ -65,6 +84,46 @@ function header() {
       drawerMenuWrapper.classList.toggle("active");
       drawerChecker();
     });
+
+    backHomeNav.forEach((item) => {
+      item.addEventListener("click", () => {
+        subMenus.forEach((subMenu) => {
+          subMenu.classList.remove("active");
+          homeNav.classList.add("active");
+        });
+      });
+    });
+
+    goExploreMenu.addEventListener("click", () => {
+      subExplore.classList.add("active");
+      homeNav.classList.remove("active");
+    });
+
+    goStatsMenu.addEventListener("click", () => {
+      subStats.classList.add("active");
+      homeNav.classList.remove("active");
+    });
+
+    goResourcesMenu.addEventListener("click", () => {
+      subResources.classList.add("active");
+      homeNav.classList.remove("active");
+    });
+
+    function drawerChecker() {
+      if (
+        myWallet.classList.contains("active") ||
+        mobileNav.classList.contains("active")
+      ) {
+        //Prevents the user from scrolling the page while the drawer menu is on the screen.
+        document.body.style.overflow = "hidden";
+        drawerMenu.style.visibility = "visible";
+        hamburgerIcon.firstElementChild.textContent = "close";
+      } else {
+        drawerMenu.style.visibility = "hidden";
+        document.body.style.overflowY = "auto";
+        hamburgerIcon.firstElementChild.textContent = "menu";
+      }
+    }
   }
 }
 
