@@ -37,6 +37,9 @@ function header() {
     const walletIcon = document.querySelector(".wallet-icon");
     const drawerMenu = document.querySelector(".drawer-menu-background");
     const drawerMenuWrapper = document.querySelector(".drawer-menu-wrapper");
+    const backArrow = document.querySelector(
+      ".drawer-menu-wrapper .back-arrow"
+    );
     drawerChecker();
     function drawerChecker() {
       if (drawerMenuWrapper.classList.contains("active")) {
@@ -54,6 +57,11 @@ function header() {
     });
 
     drawerMenu.addEventListener("click", () => {
+      drawerMenuWrapper.classList.toggle("active");
+      drawerChecker();
+    });
+
+    backArrow.addEventListener("click", () => {
       drawerMenuWrapper.classList.toggle("active");
       drawerChecker();
     });
