@@ -20,8 +20,8 @@
 ## Componentler Ve Görev Dağılımı
 
 | Components       | Names                                                                                        |
-|------------------|----------------------------------------------------------------------------------------------|
-| Header & Buttons | [Ibrahim Halit](https://github.com/ibo-ibo)                                                  |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| Header & Buttons | [Enes Öztekin](https://github.com/enesoeztekin)                                              |
 | Hero Section     | [Arda Çelik](https://github.com/celik-arda)                                                  |
 | Sliders & Brands | [ZIAR Parvaiz](https://github.com/ziarparvaiz) & [Caner Aylan](https://github.com/Shermes-s) |
 | Cards & Features | [Cansu Ayada](https://github.com/cansuayada)                                                 |
