@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    height: 800px;
+    width: 100%;
+    background-color: rgb(24, 104, 183);
+    font-family: Poppins, sans-serif;
+    line-height: 1.5;
+    position: absolute;
+}
+.top{
+    margin: 6px auto;
+    padding: 10px;
+    height: 300px;
+    
+    }
+.lefttop{
+    color: rgb(255, 255, 255);
+    width: 440px;
+    margin: 5px 130px 10px 95px;
+     padding: 10px;
+float: left;
+
+position: relative;
+}
+.fontsize{
+    padding-top: 20px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+h5{
+    font-size: 15px;
+}
+.toggle-btn{
+    position: relative;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(32, 129, 226);
+    border-radius: 10px;
+    height: 50px;
+}
+.btn-box button:nth-child(2){
+    color: white;
+}
+.border{
+    border-radius: 10px;
+    width: 290px;
+    height: 50px;
+    font-size: 17px;
+    padding: 5px;
+    
+}
+.text{
+    padding-top: 15px;
+}
+.righttop{
+    color: rgb(255, 255, 255);
+    width: 480px;
+    padding: 8px ;
+display: flex;
+height: 200px;
+margin: 5px 10px 10px 95px;
+flex-direction: column;
+}
+
+.bordersize{
+    width: 500px;
+    height: 50px;
+    display: block;
+    }
+.imgs{
+    width: 80px;
+    display: flex;
+    height: 60px;
+    padding: 500px;
+    display: flex;
+    padding: 5px;
+    
+}
+.picture{
+    padding: 15px 25px 0;
+    background-color: rgb(27, 130, 233);
+    margin: 0 5px 0 10px;
+    padding: 0 10px;
+    position: relative;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 17px;
+    padding: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.tekresim{
+    padding: 0 0 0 170px;
+}
+img{
+    padding: 0;
+    max-width: 40px;
+    max-height: 40px;
+}
+.duzcizgi{
+    margin: auto;
+    width: 1000px;
+    opacity: 0.2;
+}
+.solalt{
+    width: 340px;
+    margin: 90px 0 0 120px;
+    float: left;
+    display: inline;
+    color: white;
+}
+ul
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.liste{
+    width: 150px;
+    height: 270px;
+    margin: 90px 0 0 10px;
+    color: white;
+    float: left;
+    position: relative;
+}
+.liste2{
+    width: 150px;
+    height: 150px;
+    margin: 90px 0 0 50px;
+    color: white;
+    float: left;
+    position: relative;
+}
+.liste3{
+    width: 150px;
+    height: 100px;
+    margin: 270px 0 0 -150px;
+    color: white;
+    float: left;
+    position: relative;
+}
+.liste4{
+    width: 150px;
+    height: 270px;
+    margin: 90px 0 0 50px;
+    color: white;
+    float: left;
+    position: relative;
+}
+.liste5{
+    width: 150px;
+    height: 150px;
+    margin: 90px 0 0 50px;
+    color: white;
+    float: left;
+    position: relative;
+}
+.duzcizgi2{
+    margin: 0 50px;
+}
+.enasagi{
+    color: white;
+    margin: 390px auto  -150px ;
+
+}
+.kutu{
+    width: 1000px;
+    height: 2px;
+    background-color: white;
+    margin: -5px auto 15px;
+    opacity: 0.2;
+    position: relative;
+}
+.yerleştir{
+    margin: -17px 0 0 112px;
+    color: white;
+    font-size: 12px;
+    float: left;
+    width: 250px;
+    
+}
+.sagenalt{
+    color: white;
+    font-size: 12px;
+   
+    
+}
