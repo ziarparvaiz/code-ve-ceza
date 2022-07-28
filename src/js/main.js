@@ -1,6 +1,8 @@
 // components
-import header from "./components/header";
-import heroSection from "./components/heroSection";
-import sliders from "./components/sliders";
-import collections from "./components/collections";
-import brands from "./components/brands";
+import header from "./components/header.js";
+import heroSection from "./components/heroSection.js";
+import sliders from "./components/sliders.js";
+import collections from "./components/collections.js";
+import brands from "./components/brands.js";
+
+sliders(3)
