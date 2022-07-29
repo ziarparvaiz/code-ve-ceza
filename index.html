@@ -35,22 +35,347 @@
             <span class="material-symbols-outlined icon">
                 search
             </span>
+            <span class="back-arrow material-symbols-outlined icon">
+                chevron_left
+            </span>
             <input type="text" placeholder="Search items, collections, and accounts">
         </div>
         <nav>
             <ul class="nav-menu">
-                <li>Explore</li>
-                <li>Stats</li>
-                <li>Resources</li>
+                <li class="dropdown">
+                    Explore
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/allnfts-dark.svg" alt="All NFTs">
+                                All NFTs
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/solana-dark.svg" alt="Solana NFTs">
+                                Solana NFTs
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/art-dark.svg" alt="Art">
+                                Art
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/collectibles-dark.svg" alt="Collectibles">
+                                Collectibles
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/domain-names-dark.svg" alt="Domain Names">
+                                Domain Names
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/music-dark.svg" alt="Music">
+                                Music
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/photography-category-dark.svg"
+                                    alt="Photography">
+                                Photography
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/sports-dark.svg" alt="Sports">
+                                Sports
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/trading-cards-dark.svg"
+                                    alt="Trading Cards">
+                                Trading Cards
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/utility-dark.svg" alt="Utility">
+                                Utility
+                            </li>
+                            <li>
+                                <img src="./src/static/header-dropdown-icons/virtual-worlds-dark.svg"
+                                    alt="Virtual Worlds">
+                                Virtual Worlds
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Stats
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>Rankings</li>
+                            <li>Activities</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Resources
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>Help Center</li>
+                            <li>Platform Status</li>
+                            <li>Partners</li>
+                            <li>Gas-Free Marketplace</li>
+                            <li>Taxes</li>
+                            <li>Blog</li>
+                            <li>Docs</li>
+                            <li>Newsletter</li>
+                            <li class="social-icons">
+                                <img src="./src/static/header-dropdown-icons/social-icons/twitter.svg" alt="Twitter">
+                                <img src="./src/static/header-dropdown-icons/social-icons/instagram.svg"
+                                    alt="Instagram">
+                                <img src="./src/static/header-dropdown-icons/social-icons/discord.svg" alt="Discord">
+                                <img src="./src/static/header-dropdown-icons/social-icons/reddit.svg" alt="Reddit">
+                                <img src="./src/static/header-dropdown-icons/social-icons/youtube.svg" alt="Youtube">
+                                <img src="./src/static/header-dropdown-icons/social-icons/tiktok.svg" alt="Tiktok">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li>Create</li>
-                <li><span class="material-symbols-outlined menu-icon">
+                <li class="dropdown stay-lg">
+                    <span class="material-symbols-outlined menu-icon">
                         account_circle
-                    </span></li>
-                <li><span class="material-symbols-outlined menu-icon">
+                    </span>
+                    <div class="dropdown-content acc-icon">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                Profile
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    favorite_border
+                                </span>
+                                Favorites
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                                Watchlist
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    grid_on
+                                </span>
+                                My Collections
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">
+                                    settings
+                                </span>
+                                Settings
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="stay-lg wallet-icon"><span class="material-symbols-outlined menu-icon">
                         account_balance_wallet
                     </span></li>
+                <li class="hamburger-menu stay">
+                    <span class="material-symbols-outlined menu-icon">
+                        menu
+                    </span>
+                </li>
+                <li class="search-icon stay">
+                    <span class="material-symbols-outlined menu-icon">
+                        search
+                    </span>
+                </li>
+
             </ul>
         </nav>
+        <div class="drawer-menu-background"></div>
+        <div class="drawer-menu-wrapper" id="my-wallet">
+            <div class="wrapper-header">
+                <span class="back-arrow material-symbols-outlined icon">
+                    chevron_left
+                </span>
+                <img src="./src/static/header-drawer-icons/account_circle.svg" alt="Acc. Icon"
+                    style="width: 30px; margin-right: 0.5rem;">
+                My wallet
+            </div>
+            <div class="wrapper-content">
+                <p>If you don't have a <a href="#">wallet</a> yet, you can select a provider and create one now.</p>
+                <ul>
+                    <li>
+                        <img src="src/static/header-drawer-icons/metamask-fox.svg" alt="Metamask">
+                        <span class="wallet-name">MetaMask</span>
+                        <div class="wallet-category wallet-category-primary">Popular</div>
+                    </li>
+                    <li>
+                        <img src="src/static/header-drawer-icons/walletlink-alternative.webp" alt="Coinbase Wallet">
+                        <span class="wallet-name">Coinbase Wallet</span>
+                    </li>
+                    <li>
+                        <img src="src/static/header-drawer-icons/walletconnect-alternative.webp" alt="WalletConnect">
+                        <span class="wallet-name">WalletConnect</span>
+                    </li>
+                    <li>
+                        <img src="src/static/header-drawer-icons/phantom.svg" alt="Phantom">
+                        <span class="wallet-name">Phantom</span>
+                        <div class="wallet-category wallet-category-secondary">Solana</div>
+                    </li>
+                    <li>
+                        <img src="src/static/header-drawer-icons/glow.svg" alt="Glow">
+                        <span class="wallet-name">Glow</span>
+                        <div class="wallet-category wallet-category-secondary">Solana</div>
+                    </li>
+                    <li class="more-options">Show more options</li>
+                </ul>
+            </div>
+        </div>
+        <div class="drawer-menu-wrapper" id="mobile-nav">
+            <div class="wrapper-content sub-menu active" id="home-nav">
+                <ul>
+                    <li id="goExplore">
+                        <span class="material-symbols-outlined">
+                            explore
+                        </span>
+                        Explore
+                        <span class="material-symbols-outlined"
+                            style="margin-left: auto; font-size: 24px; font-weight: 400;">
+                            chevron_right
+                        </span>
+                    </li>
+                    <li id="goStats">
+                        <span class="material-symbols-outlined">
+                            bar_chart
+                        </span>
+                        Stats
+                        <span class="material-symbols-outlined"
+                            style="margin-left: auto; font-size: 24px; font-weight: 400;">
+                            chevron_right
+                        </span>
+                    </li>
+                    <li id="goResources">
+                        <span class="material-symbols-outlined">
+                            library_books
+                        </span>
+                        Resources
+                        <span class="material-symbols-outlined"
+                            style="margin-left: auto; font-size: 24px; font-weight: 400;">
+                            chevron_right
+                        </span>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary">Connect Wallet</button>
+                    </li>
+                    <div class="social-icons">
+                        <img src="./src/static/header-dropdown-icons/social-icons/twitter.svg" alt="Twitter">
+                        <img src="./src/static/header-dropdown-icons/social-icons/instagram.svg" alt="Instagram">
+                        <img src="./src/static/header-dropdown-icons/social-icons/discord.svg" alt="Discord">
+                        <img src="./src/static/header-dropdown-icons/social-icons/reddit.svg" alt="Reddit">
+                        <img src="./src/static/header-dropdown-icons/social-icons/youtube.svg" alt="Youtube">
+                        <img src="./src/static/header-dropdown-icons/social-icons/tiktok.svg" alt="Tiktok">
+                    </div>
+                </ul>
+            </div>
+            <div class="wrapper-content sub-menu" id="sub-explore">
+                <div class="wrapper-header">
+                    <span class="back-arrow material-symbols-outlined icon">
+                        chevron_left
+                    </span>
+                    Explore
+                </div>
+                <ul>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/allnfts-dark.svg" alt="All NFTs">
+                        All NFTs
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/solana-dark.svg" alt="Solana NFTs">
+                        Solana NFTs
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/art-dark.svg" alt="Art">
+                        Art
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/collectibles-dark.svg" alt="Collectibles">
+                        Collectibles
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/domain-names-dark.svg" alt="Domain Names">
+                        Domain Names
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/music-dark.svg" alt="Music">
+                        Music
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/photography-category-dark.svg" alt="Photography">
+                        Photography
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/sports-dark.svg" alt="Sports">
+                        Sports
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/trading-cards-dark.svg" alt="Trading Cards">
+                        Trading Cards
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/utility-dark.svg" alt="Utility">
+                        Utility
+                    </li>
+                    <li>
+                        <img src="./src/static/header-dropdown-icons/virtual-worlds-dark.svg" alt="Virtual Worlds">
+                        Virtual Worlds
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper-content sub-menu" id="sub-stats">
+                <div class="wrapper-header">
+                    <span class="back-arrow material-symbols-outlined icon">
+                        chevron_left
+                    </span>
+                    Stats
+                </div>
+                <ul>
+                    <li>
+                        Rankings
+                    </li>
+                    <li>
+                        Activity
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper-content sub-menu" id="sub-resources">
+                <div class="wrapper-header">
+                    <span class="back-arrow material-symbols-outlined icon">
+                        chevron_left
+                    </span>
+                    Resources
+                </div>
+                <ul>
+                    <li>
+                        Help Center
+                    </li>
+                    <li>
+                        Platform Status
+                    </li>
+                    <li>
+                        Partners
+                    </li>
+                    <li>
+                        Gas-Free Marketplace
+                    </li>
+                    <li>
+                        Taxes
+                    </li>
+                    <li>
+                        Blog
+                    </li>
+                    <li>
+                        Docs
+                    </li>
+                    <li>
+                        Newsletter
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
 
@@ -74,12 +399,12 @@
                 <p>Click <a href="#"> My Collections </a> up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.</p>
             </div>
             <div class="cardthree">
-                <img class="cardonemobile" src="icons/icon3.png" alt="">
+                <img class="cardonemobile" src="src/static/category.png/icon3.png" alt="">
                 <h3 class="threetitle" >Add your NFTs</h3>
                 <p>Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content.</p>
             </div>
             <div class="cardfour">
-                <img class="cardonemobile" src="icons/icon4.png" alt="">
+                <img class="cardonemobile" src="src/static/category.png/icon4.png" alt="">
                 <h3 class="fourtitle" >List them for sale</h3>
                 <p>Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!</p>
             </div>
@@ -92,15 +417,15 @@
         <div class="cardstwo"> <!--resources bölgesi-->
 
             <div class="bigcard">
-                <img class="card" src="cards1/1.png" alt="">
+                <img class="card" src="src/static/category.png/1.png" alt="">
                 <div class="metamask"> How to Easily Setup a MetaMask Wallet</div>
             </div>
             <div class="bigcard">
-                <img class="card" src="cards1/2.jpg" alt="">
+                <img class="card" src="src/static/category.png/2.jpg" alt="">
                 <div class="metamask"> How to Fund MetaMask with ETH</div>
             </div>
             <div class="bigcard">
-                <img class="card" src="cards1/3.png" alt="">
+                <img class="card" src="src/static/category.png/3.png" alt="">
                 <div class="metamask"> How to Find an NFT You Love</div>
             </div>
         </div>
@@ -113,39 +438,39 @@
 
             <div class="category">
                 <div class="one">
-                    <img src="cards2/image1.png" alt="" class="cards">
+                    <img src="src/static/category.png/image1.png" alt="" class="cards">
                     <div class="categorys">Art</div>
                 </div>
                 <div class="two">
-                    <img src="cards2/image2.png" alt="" class="cards">
+                    <img src="src/static/category.png/image2.png" alt="" class="cards">
                     <div class="categorys">Collectibles</div>
                 </div>
                 <div class="three">
-                    <img src="cards2/image3.png" alt="" class="cards">
+                    <img src="src/static/category.png/image3.png" alt="" class="cards">
                     <div class="categorys">Domain Names</div>
                 </div>
                 <div class="four">
-                    <img src="cards2/image4.png" alt="" class="cards">
+                    <img src="src/static/category.png/image4.png" alt="" class="cards">
                     <div class="categorys">Music</div>
                 </div>
                 <div class="five">
-                    <img src="cards2/image5.png" alt="" class="cards">
+                    <img src="src/static/category.png/image5.png" alt="" class="cards">
                     <div class="categorys">Photography</div>
                 </div>
                 <div class="six">
-                    <img src="cards2/image6.png" alt="" class="cards">
+                    <img src="src/static/category.png/image6.png" alt="" class="cards">
                     <div class="categorys">Sports</div>
                 </div>
                 <div class="seven">
-                    <img src="cards2/image7.png" alt="" class="cards">
+                    <img src="src/static/category.png/image7.png" alt="" class="cards">
                     <div class="categorys">Trading Cards</div>
                 </div>
                 <div class="eight">
-                    <img src="cards2/image8.png" alt="" class="cards">
+                    <img src="src/static/category.png/image8.png" alt="" class="cards">
                     <div class="categorys">Utility</div>
                 </div>
                 <div class="nine">
-                    <img src="cards2/image9.png" alt="" class="cards">
+                    <img src="src/static/category.png/image9.png" alt="" class="cards">
                     <div class="categorys">Virtual Worlds</div>
                 </div>
             </div>
@@ -666,6 +991,108 @@
         </div>
     </section>
     <!-- Brand component End -->
+  
+    <!-- footer -->
+    <div class="main">
+        <div class="top">
+          <div class="lefttop">
+             <h3 class="fontsize">Stay in the loop</h3>
+             <h5>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating OpenSea</h5>
+             
+             <div class="btn-box">
+              <form class="d-flex text" role="search">
+                <input class="form-control me-2 border" type="search" placeholder="  Your email addrees" aria-label="Search">
+                <button type="button" class="toggle-btn">Sing up</button>
+              </form>
+             </div>
+          </div>
+          <div class="righttop">
+              <h3 class="bordersize">Join the community</h3>
+              <div class="imgs">
+                <div >
+                <img src="https://i.hizliresim.com/bemsfdh.png"  width="20" height="20" class="picture">
+              </div>
+              <div class="cerceve">
+                <img src="https://i.hizliresim.com/9atwhjo.png" width="25" height="25" class="picture">
+              </div>
+              <div class="cerceve">
+                <img src="https://i.hizliresim.com/pgfybsq.png" width="25" height="25"class="picture">
+              </div>
+              <div class="cerceve">
+                <img src="https://i.hizliresim.com/idlesw1.png" width="25" height="25"class="picture">
+              </div>
+              <div class="cerceve">
+                <img src="https://i.hizliresim.com/3dfs61a.png" width="25" height="25"class="picture">
+              </div>
+              <div class="cerceve">
+                <img src="https://i.hizliresim.com/rlvtmjy.png" width="25" height="25"class="picture">
+              </div>
+              </div>
+                <div class="tekresim cerceve">
+                <img src="https://i.hizliresim.com/aq5zyen.png" width="25" height="25"class="picture">
+                </div>
+          </div> 
+        </div>
+           <hr class="duzcizgi">
+        <div class="solalt">
+            <img src="https://i.hizliresim.com/tpde4qh.png">
+            <h2 >OpenSea</h2>
+            <h2>The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</h2>
+        </div>
+        <div class="liste">
+          <h2>Marketplace</h2>
+          <a href="https://opensea.io">All NFTs</a><br>
+          <a href="https://opensea.io">Solana NFTs</a><br>
+          <a href="https://opensea.io">Art</a><br>
+          <a href="https://opensea.io">Collectibles</a><br>
+          <a href="https://opensea.io">Domain Names</a><br>
+          <a href="https://opensea.io">Music</a><br>
+          <a href="https://opensea.io">Photography</a><br>
+          <a href="https://opensea.io">Sports</a><br>
+          <a href="https://opensea.io">Trading Cards</a><br>
+          <a href="https://opensea.io">Utility</a><br>
+          <a href="https://opensea.io">Virtual Worlds</a><br>
+        </div>
+        <div class="liste2">
+          <h2>My Account</h2>
+          <a href="https://opensea.io">Profile</a><br>
+          <a href="https://opensea.io">Favorites</a><br>
+          <a href="https://opensea.io">Watchlist</a><br>
+          <a href="https://opensea.io">My Collections</a><br>
+          <a href="https://opensea.io">Settings</a><br>
+        </div>
+        <div class="liste3">
+          <h2>Stats</h2>
+          <a href="https://opensea.io">Rankings</a><br>
+          <a href="https://opensea.io">Activity</a><br>
+        </div>
+        <div class="liste4">
+          <h2>Resources</h2>
+          <a href="https://opensea.io">Help Center</a><br>
+          <a href="https://opensea.io">Platform Status</a><br>
+          <a href="https://opensea.io">Partners</a><br>
+          <a href="https://opensea.io">Gas-Free Marketplace</a><br>
+          <a href="https://opensea.io">Taxes</a><br>
+          <a href="https://opensea.io">Blog</a><br>
+          <a href="https://opensea.io">Docs</a><br>
+          <a href="https://opensea.io">Newsletter</a><br>
+        </div>
+        <div class="liste5">
+          <h2>Company</h2>
+          <a href="https://opensea.io">About</a><br>
+          <a href="https://opensea.io">Careers</a><br>
+          <a href="https://opensea.io">Ventures</a><br>
+          <a href="https://opensea.io">Grants</a><br>
+        </div> 
+        <div class="kutu">
+            <h6 class="enasagi">© 2018 - 2022 Ozone Networks, Inc</h6>
+        </div>
+        <div>
+            <h6 class="yerleştir">© 2018 - 2022 Ozone Networks, Inc</h6>
+        
+        </div>
+    </div>
+        <!-- footer -->
 
     <!-- MAIN JS LINK -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
