@@ -6,8 +6,11 @@ header {
     align-items: center;
     height: 72px;
     padding: 0 24px;
-}
+    position: fixed;
+    left: 0;
+    right: 0;
 
+}
 
 header img {
     height: auto;
@@ -18,19 +21,36 @@ header img {
 header .search-bar {
     height: 48px;
     padding: 8px;
+    margin: 0 1rem;
+    margin-left: 11rem;
     border: 2px solid rgb(76, 80, 92);
     border-radius: 10px;
     display: flex;
-    gap: 1rem;
+    gap: 8px;
     align-items: center;
     width: 100%;
     max-width: 768px;
     user-select: none;
+    vertical-align: middle;
+    z-index: 99;
+}
+
+@media (max-width: 1600px) {
+    header .search-bar {
+        margin-left: 1rem;
+    }
 }
 
 header .search-bar .icon {
     color: rgb(138, 147, 155);
     font-weight: 600;
+    font-size: 22px;
+}
+
+header .search-bar .icon.back-arrow {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
 }
 
 header .search-bar input {
@@ -44,15 +64,76 @@ header .search-bar input {
 
 }
 
-header .search-bar input::placeholder {
+header .search-bar .icon:not() header .search-bar input::placeholder {
     color: rgb(138, 147, 155);
+}
+
+@media (max-width: 768px) {
+    /* var(--mediaBreakpoint-MD) */
+
+    header .search-bar {
+        display: none;
+    }
+
+    header .search-bar.active {
+        display: flex;
+    }
+
+    header .search-bar.active {
+        position: absolute;
+        width: unset;
+        height: inherit;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        border: unset;
+        border-radius: unset;
+        background-color: rgb(53, 56, 64);
+    }
+
+    header .search-bar.active>span {
+        display: none;
+    }
+
+    header .search-bar.active .icon.back-arrow {
+        display: block;
+    }
+
+    header .search-bar.active input {
+        width: 100%;
+    }
+}
+
+header nav {
+    height: 100%;
 }
 
 header nav .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
     font-weight: bold;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    /* var(--mediaBreakpoint-XL) */
+
+    header nav .nav-menu>li:not(.stay):not(.stay-lg) {
+        /* Hide all the 'li' elements in .nav-menu that doesn't have .stay and .stay-lg classes */
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    /* var(--mediaBreakpoint-LG) */
+
+    header nav .nav-menu>li:not(.stay) {
+        /* Hide all the 'li' elements in .nav-menu that doesn't have only .stay classes */
+        /* So, the 'li' elements that have .stay class will be displayed in each screen size. */
+        display: none;
+    }
 }
 
 header nav .nav-menu li {
@@ -64,11 +145,385 @@ header nav .nav-menu li span:hover {
     color: var(--light);
 }
 
+header nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(48, 51, 57);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    transform: translateX(-1rem);
+}
+
+/* Select only .dropdown-content tags which have .acc-icon class. (START) */
+header nav .dropdown-content.acc-icon {
+    transform: translateX(-8rem);
+}
+
+header nav .dropdown-content.acc-icon span {
+    margin-right: 16px;
+}
+
+header nav .dropdown-content.acc-icon ul>* {
+    min-width: 200px;
+}
+
+/* Select only .dropdown-content tags which have .acc-icon class. (END) */
+
+header nav .dropdown-content::before {
+    /* This is kind of a bridge between 'li' items, which have dropdown menu, and .dropdown-content to keep dropdown menu is open. 
+    Otherwise it's closing while scrolling down the cursor towards dropdown-menu. */
+    content: "";
+    background-color: var(--navbarBg);
+    display: block;
+    height: 1.5rem;
+    width: inherit;
+}
+
+header nav .dropdown-content ul>* {
+    /* Selects the categories in the dropdown menus. */
+    padding: 1rem;
+    border-bottom: 1px solid rgb(21, 27, 34);
+    display: flex;
+    align-items: center;
+}
+
+header nav .dropdown-content ul>*:hover {
+    background-color: rgb(38, 43, 47);
+    transition: 0.2s ease;
+}
+
+header nav .dropdown-content ul>*:nth-last-child() {
+    padding: 1rem;
+}
+
+header nav .dropdown-content ul .social-icons {
+    /* Selects the wrapper of social media icons in the dropdown menu of Resources. */
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: .75rem;
+    cursor: text;
+    background-color: unset;
+}
+
+header nav .dropdown-content ul .social-icons>* {
+    /* Selects the social media icons in the dropdown menu of Resources. */
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+header nav .dropdown-content ul>*>img {
+    width: 24px;
+    height: 24px;
+    margin-right: .5rem;
+    object-fit: contain;
+}
+
 header nav .nav-menu .menu-icon {
     font-weight: 600;
     color: rgb(138, 147, 155);
     font-size: 30px;
     align-items: center;
-    padding: 0 10px;
     vertical-align: middle;
+}
+
+header nav .nav-menu .menu-icon:nth-child(1) {
+    padding: 0 5px;
+}
+
+header nav .nav-menu .hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+header nav .nav-menu .search-icon {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    /* var(--mediaBreakpoint-XL) */
+
+    header nav .nav-menu .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    /* var(--mediaBreakpoint-MD) */
+
+    header nav .nav-menu .search-icon {
+        order: -1;
+        display: block;
+    }
+}
+
+header .drawer-menu-background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    /* Its top offset is as height as <header> element. */
+    top: 72px;
+}
+
+header .drawer-menu-wrapper {
+    background-color: var(--bgColor);
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
+    width: 420px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 72px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(420px);
+    opacity: 0;
+}
+
+header .drawer-menu-wrapper .icon {
+    color: rgb(138, 147, 155);
+    font-weight: 600;
+}
+
+header .drawer-menu-wrapper .icon:hover {
+    color: white;
+}
+
+header .drawer-menu-wrapper .icon.back-arrow {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+header .drawer-menu-wrapper#mobile-nav .sub-menu .back-arrow {
+    display: block;
+}
+
+@media (max-width: 992px) {
+    header .drawer-menu-wrapper {
+        width: 100%;
+        z-index: 5;
+    }
+
+    header .drawer-menu-wrapper .icon.back-arrow {
+        display: block
+    }
+}
+
+header .drawer-menu-wrapper.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+header .drawer-menu-wrapper .wrapper-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgb(21, 27, 34);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+header .drawer-menu-wrapper .wrapper-content {
+    padding: 1.25rem;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content {
+    /* For only mobile drawer menu */
+    padding: 0
+}
+
+header .drawer-menu-wrapper .wrapper-content ul {
+    border: 1px solid rgb(21, 27, 34);
+    width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul {
+    /* For only mobile drawer menu */
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    background-color: var(--gray);
+}
+
+@media (max-width: 992px) {
+    header .drawer-menu-wrapper#mobile-nav .wrapper-content#home-nav ul>li:nth-child(4) {
+        /* For only home-nav of mobile drawer menu */
+        position: fixed;
+        bottom: 5rem;
+        width: 100%;
+    }
+
+    header .drawer-menu-wrapper#mobile-nav .wrapper-content ul li>button {
+        /* For only mobile drawer menu */
+        width: 100%;
+    }
+}
+
+
+
+header .drawer-menu-wrapper .wrapper-content ul>li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(21, 27, 34);
+    color: white;
+    font-weight: bold;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li {
+    /* For only mobile drawer menu */
+    gap: .5rem;
+    padding: 1.5rem 1rem;
+    border-bottom: unset;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li>span {
+    /* For only mobile drawer menu */
+    font-size: 32px;
+    font-weight: 600;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:hover {
+    background-color: rgb(38, 43, 47);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li:hover {
+    /* For only mobile drawer menu */
+    background-color: unset;
+    transition: unset;
+    cursor: pointer;
+    color: white;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:first-child:hover {
+    /* Selects the first item of the list inside wrapper content and applies it 10px of border-top-left and border-top-right radius while it's hovering. */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:last-child:hover {
+    /* Selects the last item of the list inside wrapper content and applies it 10px of border-bottom-left and border-bottom-right radius while it's hovering. */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li:first-child:hover {
+    /* For only mobile drawer menu */
+    /* Undo border radius properties of wrapper content for .mobile-nav drawer. */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+header .drawer-menu-wrapper#mobile-nav .wrapper-content ul>li:last-child:hover {
+    /* For only mobile drawer menu */
+    /* Undo border radius properties of wrapper content for .mobile-nav drawer. */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+header #mobile-nav .wrapper-content .social-icons {
+    /* For only mobile drawer menu */
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 2rem;
+    cursor: text;
+    background-color: var(--bgColor);
+    width: 100%;
+    height: 3rem;
+    padding: 2.5rem 0;
+}
+
+header #mobile-nav .wrapper-content .social-icons>* {
+    /* For only mobile drawer menu */
+    cursor: pointer;
+    margin-right: 0;
+    width: 24px;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li:last-child {
+    /* Prevents the last child item of the list from adding a border-bottom. */
+    border-bottom: none;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li>img {
+    height: 24px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+header .drawer-menu-wrapper .wrapper-content ul>li>.wallet-name {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.wallet-category {
+    font-weight: 400;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.wallet-category-primary {
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.wallet-category-secondary {
+    background-color: var(--lightGray);
+    border-radius: 10px;
+}
+
+.more-options {
+    justify-content: center;
+    align-items: center;
+    color: rgb(229, 232, 235);
+}
+
+header #mobile-nav .wrapper-content.sub-menu .wrapper-header {
+    cursor: pointer;
+}
+
+header #mobile-nav .wrapper-content.sub-menu {
+    display: none;
+    overflow-y: auto;
+}
+
+header #mobile-nav .wrapper-content.sub-menu.active {
+    display: block;
+}
+
+header #mobile-nav .wrapper-content.sub-menu#home-nav.active {
+    display: flex;
+}
+
+header #mobile-nav {
+    transform: translateX(420px);
+    opacity: 0;
+}
+
+header #mobile-nav.active {
+    transform: translateX(0px);
+    opacity: 1;
 }
