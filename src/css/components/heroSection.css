@@ -7,27 +7,33 @@ section .hero-section {
     margin-bottom: 4rem;
     width: 100%;
     padding: 0px 9% 0px 9%;
-    height: 420px;
+    height: 432px;
+    border: 2px dashed yellow;
 }
 
 
 .left-hero-side {
     display: grid;
-    grid-template-rows: 12fr 12fr 7fr 7fr;
-    padding: 1.5rem 0;
+    grid-template-rows: 29% 29% 17% 17%;
+    row-gap: 0.2rem;
+    padding: 2rem 0;
 }
 
 .left-hero-side h1.website-slogan-title {
-    font-size: 45px;
+    font-size: 43px;
     font-weight: 600;
-    line-height: 46px;
+    line-height: 43px;
+    text-align: left;
+    padding-right: 2.4rem;
+    padding-bottom: 0.2rem;
 }
 
 .left-hero-side h2.website-secondary-slogan {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     opacity: 0.3;
-    padding-right: 12rem;
+    padding-right: 7rem;
+    text-align: left;
 }
 
 .hero-section-buttons button {
@@ -55,8 +61,7 @@ section .hero-section {
 
 .hero-section .right-hero-side {
     display: grid;
-    grid-template-rows: 340px auto;
-    /* overflow: hidden; */
+    grid-template-rows: 345px 60px;
     border-radius: 12px;
     background-color: var(--gray);
     transition-property: box-shadow;
@@ -70,7 +75,6 @@ section .hero-section {
 
 .right-hero-side .hero-image-container {
     width: 460px;
-    overflow: hidden;
 }
 
 .hero-nft-image {
@@ -80,6 +84,7 @@ section .hero-section {
 
 .hero-section .image-info-bar {
     background-color: var(--gray);
+    height: 76px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -98,4 +103,40 @@ section .hero-section {
 
 .hero-section .nft-artist-infos h5 {
     font-weight: 500;
+}
+
+
+
+/*   RESPONSIVE BREAKPOINTS   */
+
+@media screen and (min-width: 1216px) and (max-width: 1401px) {
+
+    section .hero-section {
+        padding: 0px 4% 0px 4%;
+    }
+
+    .left-hero-side h1.website-slogan-title {
+        padding-right: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1215px) {
+
+    section .hero-section {
+        padding: 0px 4% 0px 4%;
+        column-gap: 5%;
+    }
+
+    .left-hero-side h1.website-slogan-title {
+        font-size: 32px;
+        padding-right: 1rem;
+    }
+
+    .left-hero-side h2.website-secondary-slogan {
+        padding-right: 5rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 576px) {
+
 }
