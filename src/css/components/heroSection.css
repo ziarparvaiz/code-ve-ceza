@@ -1,14 +1,13 @@
 section .hero-section {
+    width: 100%;
+    height: 432px;
     display: grid;
     grid-template-columns: 12fr 8fr;
     column-gap: 7%;
     box-sizing: border-box;
     margin-top: 8rem;
     margin-bottom: 4rem;
-    width: 100%;
     padding: 0px 9% 0px 9%;
-    height: 432px;
-    border: 2px dashed yellow;
 }
 
 
@@ -137,6 +136,66 @@ section .hero-section {
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 991px) {
+
+    section .hero-section {
+        width: 100%;
+        height: 900px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 300px 440px;
+        row-gap: 0;
+        padding: 0 12% 2% 12%;
+        margin-top: 4.4rem;
+    }
+
+    div.hero-section-link {
+        display: none;
+    }
+
+    .left-hero-side {
+        padding: 0;
+        row-gap: 1rem;
+        grid-template-rows: 28% 24% 21% 1px;
+    }
+
+    .left-hero-side h1.website-slogan-title {
+        font-size: 32px;
+        text-align: center;
+        padding:  0 0.5rem;
+    }
+
+    .left-hero-side h2.website-secondary-slogan {
+        font-size: 18px;
+        text-align: center;
+        padding: 0px 4rem 0px 4rem;
+    }
+
+
+    .hero-section-buttons {
+        text-align: center;
+    }
+
+    .hero-section-buttons button {
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+
+    .hero-section .right-hero-side {
+        width: 380px;
+        grid-template-rows: 285px 76px;
+        margin: auto;
+    }
+
+    .right-hero-side .hero-image-container {
+        width: 380px;
+    }
+
+    .hero-nft-image {
+        width: 100%;
+    }
+
+    .hero-section .hero-section-link {
+        text-align: center;
+    }
 
 }
