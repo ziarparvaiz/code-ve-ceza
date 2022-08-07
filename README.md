@@ -1,29 +1,41 @@
-# Code VE Ceza
+<h1 align="center">
+  <a href="https://github.com/Cutting-Edge-Developers/code-ve-ceza"><img src="./src/static/code-ve-ceza.png" alt="CODE VE CEZA"></a>
+</h1>
 
-## Responsive Tasarım İçin Kullanılacak Breakpoint Değerleri
+<div align="center">
+<br />
+<a herf="./LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/Cutting-Edge-Developers/code-ve-ceza?style=for-the-badge"/></a>
+<a herf=".URL_"><img alt="Open Source - ❤️" src="https://img.shields.io/badge/Open_Source-❤️-00d59b?style=for-the-badge"/></a>
+<a herf=".https://github.com/Cutting-Edge-Developers/code-ve-ceza/graphs/contributors"><img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/Cutting-Edge-Developers/code-ve-ceza?color=%23F2625A&style=for-the-badge"></a>
 
-- `var(--mediaBreakpoint-SM);`: 0,
-- `var(--mediaBreakpoint-SM);`: 576px,
-- `var(--mediaBreakpoint-MD);`: 768px,
-- `var(--mediaBreakpoint-LG);`: 992px,
-- `var(--mediaBreakpoint-XL);`: 1200px,
-- `var(--mediaBreakpoint-XXL);`: 1400px,
+<a href="https://github.com/Cutting-Edge-Developers/code-ve-ceza/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Cutting-Edge-Developers/code-ve-ceza?color=%23F2625A&style=for-the-badge"/></a>
+<a href="https://github.com/Cutting-Edge-Developers/code-ve-ceza/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome" /></a>
+</div>
 
----
+> Opensea.io Clone
 
-## Tasarım Modu
+<!-- Screenshots -->
+### Ekran Görüntüleri
 
-- Dark Mode baz alınarak yapılacak
+<div align="center"> 
+  <img src="./src/static/screenshot.png" alt="CODE VE CEZA" />
+</div>
 
----
+## Kurulum
 
-## Componentler Ve Görev Dağılımı
+```bash
+git clone https://github.com/Cutting-Edge-Developers/code-ve-ceza.git
+cd code-ve-ceza
+```
 
-| Components       | Names                                                                                        |
-| ---------------- | -------------------------------------------------------------------------------------------- |
-| Header & Buttons | [Enes Öztekin](https://github.com/enesoeztekin)                                              |
-| Hero Section     | [Arda Çelik](https://github.com/celik-arda)                                                  |
-| Sliders & Brands | [ZIAR Parvaiz](https://github.com/ziarparvaiz) & [Caner Aylan](https://github.com/Shermes-s) |
-| Cards & Features | [Cansu Ayada](https://github.com/cansuayada)                                                 |
-| Collection       | [ZIAR Parvaiz](https://github.com/ziarparvaiz) & Diğerleri                                   |
-| Footer           | [Yunus Emre Deniz](https://github.com/yunusemredeniz)                                        |
+## Katkıda Bulunanlar ✨
+
+<div style ="margin-top:2rem; margin-bottom:2rem;"> 
+<a href="https://github.com/Cutting-Edge-Developers/code-ve-ceza/graphs/contributors">
+  <img width="350" heigth="350" src="https://contrib.rocks/image?repo=Cutting-Edge-Developers/code-ve-ceza" />
+</a>
+
+
+## Lisans
+
+Bu proje, [Cutting-Edge-Developers](https://github.com/Cutting-Edge-Developers) Lisansı kapsamında lisanslanmıştır - bkz. [LİSANS](./LICENSE). ayrıntılar için dosya
