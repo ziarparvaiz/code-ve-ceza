@@ -108,6 +108,7 @@ section .hero-section {
 
 /*   RESPONSIVE BREAKPOINTS   */
 
+/*  Notebook (Large Display) */
 @media screen and (min-width: 1216px) and (max-width: 1401px) {
 
     section .hero-section {
@@ -119,6 +120,7 @@ section .hero-section {
     }
 }
 
+/*  Notebook (Standard Display) */
 @media screen and (min-width: 992px) and (max-width: 1215px) {
 
     section .hero-section {
@@ -136,12 +138,12 @@ section .hero-section {
     }
 }
 
-@media screen and (min-width: 576px) and (max-width: 991px) {
+/*  Tablets  */
+@media screen and (min-width: 577px) and (max-width: 991px) {
 
     section .hero-section {
         width: 100%;
         height: 900px;
-        display: grid;
         grid-template-columns: none;
         grid-template-rows: 300px 440px;
         row-gap: 0;
@@ -149,10 +151,7 @@ section .hero-section {
         margin-top: 4.4rem;
     }
 
-    div.hero-section-link {
-        display: none;
-    }
-
+    
     .left-hero-side {
         padding: 0;
         row-gap: 1rem;
@@ -170,7 +169,7 @@ section .hero-section {
         text-align: center;
         padding: 0px 4rem 0px 4rem;
     }
-
+    
 
     .hero-section-buttons {
         text-align: center;
@@ -178,6 +177,10 @@ section .hero-section {
 
     .hero-section-buttons button {
         padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+    
+    div.hero-section-link {
+        display: none;
     }
 
     .hero-section .right-hero-side {
@@ -199,3 +202,63 @@ section .hero-section {
     }
 
 }
+
+/*  Smartphones (iPhone 6/7/8 Plus etc.)  */
+@media screen and (min-width: 0px) and (max-width: 576px) {
+
+    section .hero-section {
+        width: 100%;
+        height: 630px;
+        margin-top: 3rem;
+        grid-template-columns: none;
+        grid-template-rows: 300px 340px;
+        row-gap: 2rem;
+    }
+
+    .left-hero-side {
+        grid-template-rows: 28% 24% 21% 1px;
+        row-gap: 1.5rem;
+    }
+
+    .left-hero-side h1.website-slogan-title {
+        font-size: 28px;
+        text-align: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        line-height: 2rem;
+    }
+
+    .left-hero-side h2.website-secondary-slogan {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .hero-section-buttons {
+        text-align: center;
+    }
+
+    .hero-section-buttons button {
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+
+    div.hero-section-link {
+        display: none;
+    }
+    
+    .hero-section .right-hero-side {
+        width: 356px;
+        grid-template-rows: 267px 76px;
+    }
+
+    .right-hero-side .hero-image-container {
+        width: 356px;
+    }
+
+    .hero-nft-image {
+        width: 100%;
+    }
+}
+
+
+/*   END OF THE DOCUMENT  */
