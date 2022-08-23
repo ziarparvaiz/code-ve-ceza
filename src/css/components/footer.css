@@ -162,6 +162,116 @@ margin: 20px 5px 0 10px;
     float: left;
     display: inline;
     color: white;
+      margin-top: 20px;
+}   
+    ul
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+.edit3{
+        font-size: 21px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    .edit4{
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .list1{
+        width: 15%;
+        float: left;
+        line-height: 2rem;
+        margin-left: 18px;
+        margin-right: 35px;
+    }
+    .list2{
+        width: 15%;
+        float: left;
+        line-height: 2rem;
+        margin-right: 35px;
+    }
+    .list3{
+        width: 15%;
+        margin-left: -170px;
+        float: left;
+        line-height: 2rem;
+        margin-top: 245px;
+        margin-right: 35px;
+    }
+    .list4{
+        width: 15%;
+        float: left;
+        line-height: 2rem;
+        
+        margin-right: 35px;
+    }
+    .list5{
+        width: 15%;
+        float: left;
+        line-height: 2rem;
+
+    }
+
+    .lowest-left{
+        color: rgb(255, 255, 255);
+        width: 100%;
+        float: left;
+        font-weight: 50px;
+        font-size:15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+         
+    }
+    .right{
+        font-size: 15px;
+        width:100%;
+        
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        left: 100px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+.line{
+    width: 10%;
+    height: 20px;
+        margin: auto;
+    
+        opacity: 0.2;
+        margin-top: 15px;
+        background-color: white;
+        height: 1px;
+    
+}    
+@media (max-width:1194px){
+    #footer .container{
+        flex-direction: column;
+    }
+    #footer .container .col2{
+        width: 100%;
+    }
+    #footer .container h1{
+        margin: 0 auto;
+        
+    }
+    #footer .container p{
+        
+        font-size: 17px;
+    }
+    
+    /* .col6 .col4{
+        width: 100%;
+    } */
+.left-top h1{
+    justify-content: center;
+    text-align: center;
 }
 .list-edit{
     color: white;
@@ -634,5 +744,6 @@ padding: 0 0;
     line-height: 2rem;
     margin-top: -330px;
     margin-left: 220px;
+}
 }
 }
