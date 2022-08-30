@@ -3,6 +3,7 @@
 }
 
 section#meet {
+    margin-top: 120px;
     padding-top: calc(76px + 1rem);
     width: 100%;
     background-color: var(--meetBg);

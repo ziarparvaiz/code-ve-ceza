@@ -276,6 +276,7 @@ section .hero-section {
     .hero-section .right-hero-side {
         width: 356px;
         grid-template-rows: 267px 76px;
+        margin: auto;
     }
 
     .right-hero-side .hero-image-container {
